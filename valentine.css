@@ -1,0 +1,53 @@
+#envelope {
+    margin: 150px;
+    position: relative;
+    width: 280px;
+    height: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 150px;
+    background: linear-gradient(to bottom right, #ffafbd, #ffc3a0);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+#valentinesText {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff6f61;
+}
+
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url('love.jpg');
+    background-size: contain;
+    animation: splashHearts 1s ease-out;
+}
+
+@keyframes openEnvelope {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-120deg);
+    }
+}
+
+@keyframes splashHearts {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) scale(2);
+        opacity: 0;
+    }
+}
